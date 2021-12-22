@@ -23,19 +23,18 @@ AS. -->
                  xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
     <!-- The datasource is bound into JNDI at this location. We reference 
     this in META-INF/persistence.xml -->
-    <datasource   jta="true" jndi-name="java:jboss/datasources/sistemaGaratiasDS" pool-name="ejPostgresDS" enabled="true" use-java-context="true" use-ccm="true">
-        <connection-url>jdbc:postgresql://localhost:5432/sistema_garantias</connection-url>
-        <driver>postgresql-driver</driver>
-        <security>
-            <user-name>sistema</user-name>
-            <password>cuenca</password>
-        </security>
-    </datasource>
-    
+    <datasource jta="true" jndi-name="java:jboss/datasources/examen" pool-name="ejMysqlDS" enabled="true" use-java-context="true" use-ccm="true">
+                    <connection-url>jdbc:mysql://localhost:3306/examen</connection-url>
+                    <driver>myqsl-driver</driver>
+                    <security>
+                        <user-name>root</user-name>
+                        <password>cuenca</password>
+                    </security>
+                </datasource>
 	<drivers>
-		<driver name="postgresql-driver" module="org.postgresql">
-			<driver-class>org.postgresql.Driver</driver-class>
-		</driver>
+		<driver name="myqsl-driver" module="com.mysql">
+                        <driver-class>com.mysql.jc.jdbc.Driver</driver-class>
+        </driver>
 	</drivers>
 	
 </datasources> 

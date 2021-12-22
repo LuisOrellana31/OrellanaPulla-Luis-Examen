@@ -25,6 +25,12 @@ public class Autor implements Serializable{
 	private Capitulos cap;
 	
 	
+	public Capitulos getCap() {
+		return cap;
+	}
+	public void setCap(Capitulos cap) {
+		this.cap = cap;
+	}
 	public Autor() {
 		super();
 		// TODO Auto-generated constructor stub

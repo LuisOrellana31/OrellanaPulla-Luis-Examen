@@ -47,6 +47,18 @@ public class Capitulos {
 
 
 
+	public Libro getLibro() {
+		return libro;
+	}
+
+
+
+	public void setLibro(Libro libro) {
+		this.libro = libro;
+	}
+
+
+
 	public int getCodigo() {
 		return codigo;
 	}
